@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security Pro Max</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=1920&q=80') no-repeat center fixed;
+background-size:cover;
+color:white;
+}
+
+header{
+background:#333;
+padding:10px;
+text-align:center;
+}
+
+.marquee{
+background:#222;
+color:white;
+padding:5px;
+}
+
+nav{
+background:grey;
+text-align:center;
+}
+nav a{
+color:white;
+padding:14px;
+display:inline-block;
+cursor:pointer;
+}
+nav a:hover{background:#555;}
+
+footer{
+background:#333;
+text-align:center;
+padding:10px;
+}
+
+.section{
+display:none;
+padding:20px;
+background:rgba(0,0,0,0.75);
+min-height:100vh;
+}
+.active{display:block;}
+
+.slider{
+position:relative;
+height:300px;
+overflow:hidden;
+}
+.slide{display:none;}
+.slide img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.prev,.next{
+position:absolute;
+top:50%;
+background:black;
+color:white;
+padding:10px;
+cursor:pointer;
+}
+.prev{left:0;}
+.next{right:0;}
+
+.div{
+background:#1E88E5;
+padding:12px;
+margin:10px 0;
+cursor:pointer;
+}
+.div:hover{background:#1565C0;}
+
+.content{
+display:none;
+background:white;
+color:black;
+padding:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+color:black;
+margin:10px 0;
+}
+th{background:#1E88E5;color:white;padding:10px;text-align:left;}
+td{border:1px solid #ccc;padding:10px;}
+tr:nth-child(even){background:#f0f0f0;}
+
+input,textarea{width:100%;padding:8px;margin:5px;box-sizing:border-box;}
+
+.section-img{
+width:100%;
+max-height:220px;
+object-fit:cover;
+margin:10px 0;
+}
+
+.info-box{
+background:#e3f2fd;
+border-left:4px solid #1E88E5;
+padding:12px 15px;
+margin:10px 0;
+color:#333;
+}
+
+.tip-list{
+background:#f1f8e9;
+border-left:4px solid #66BB6A;
+padding:12px 15px;
+margin:10px 0;
+color:#333;
+}
+
+.warning-box{
+background:#fff3e0;
+border-left:4px solid #FFA726;
+padding:12px 15px;
+margin:10px 0;
+color:#333;
+}
+
+.helpline-number{
+background:#1E88E5;
+color:white;
+font-size:2em;
+font-weight:bold;
+text-align:center;
+padding:20px;
+margin:15px 0;
+letter-spacing:2px;
+}
+
+.team-card{
+background:rgba(30,136,229,0.2);
+border:1px solid #1E88E5;
+padding:15px;
+margin:10px 0;
+}
+.team-card h4{color:#90CAF9;margin:0 0 5px 0;}
+</style>
+
+<script>
+function show(id){
+let s=document.getElementsByClassName('section');
+for(let i=0;i<s.length;i++) s[i].classList.remove('active');
+document.getElementById(id).classList.add('active');
+window.scrollTo(0,0);
+}
+
+function toggle(id){
+let x=document.getElementById(id);
+x.style.display=(x.style.display==='block')?'none':'block';
+}
+
+let i=0;
+function showSlide(n){
+let slides=document.getElementsByClassName("slide");
+if(n>=slides.length)i=0;
+if(n<0)i=slides.length-1;
+for(let j=0;j<slides.length;j++)slides[j].style.display="none";
+slides[i].style.display="block";
+}
+
+function next(){i++;showSlide(i);}
+function prev(){i--;showSlide(i);}
+
+setInterval(()=>{i++;showSlide(i);},3000);
+window.onload=()=>showSlide(i);
+</script>
+</head>
+
+<body>
+
+<header>
+<h1>Cyber Security Awareness</h1>
+</header>
+
+<div class="marquee">
+<marquee>Stay Safe Online | Protect Your Data | Cyber Awareness is Important</marquee>
+</div>
+
+<nav>
+<a onclick="show('home')">Home</a>
+<a onclick="show('concept')">Concepts</a>
+<a onclick="show('protect')">Protection</a>
+<a onclick="show('help')">Helpline</a>
+<a onclick="show('contact')">Contact</a>
+</nav>
+
+<!-- HOME - NO CHANGES -->
+<div id="home" class="section active">
+
+<div class="slider">
+<div class="slide"><img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87"></div>
+<div class="slide"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b"></div>
+<div class="slide"><img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72"></div>
+<div class="slide"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31"></div>
+<div class="slide"><img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769"></div>
+<div class="prev" onclick="prev()">❮</div>
+<div class="next" onclick="next()">❯</div>
+</div>
+
+<h2>History of Cyber Security</h2>
+<p>
+Cyber security began as a simple method of protecting standalone computers but has now become a global necessity.
+With the growth of the internet, cyber crimes such as hacking, phishing, and identity theft have increased rapidly.
+Today, cyber security protects everything from banking systems to social media accounts, ensuring safe communication and data protection.
+Governments and organizations invest heavily in cyber security to prevent attacks and secure sensitive information.
+</p>
+
+<h2>About Us</h2>
+<p>
+We aim to spread awareness about cyber threats and educate people on safe internet practices.
+Our mission is to build a secure digital environment by guiding users about risks and preventive measures.
+</p>
+
+<h2>Tips</h2>
+<ul>
+<li>Use strong passwords and update regularly</li>
+<li>Enable two-factor authentication</li>
+<li>Do not click suspicious links</li>
+<li>Keep your devices updated</li>
+<li>Install trusted antivirus software</li>
+</ul>
+
+</div>
+
+<!-- CONCEPTS PAGE -->
+<div id="concept" class="section">
+<h2>Concepts</h2>
+
+<div class="div" onclick="toggle('c1')">What is Cyber Security</div>
+<div id="c1" class="content">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber security refers to the protection of internet-connected systems including hardware, software, and data from cyber attacks. It ensures confidentiality, integrity, and availability of information, preventing unauthorized access and misuse.</p>
+<div class="info-box">
+<strong>Three Core Principles (CIA Triad):</strong><br><br>
+<b>Confidentiality</b> — Ensures data is only accessible to authorized users. Example: encrypted login credentials.<br><br>
+<b>Integrity</b> — Ensures data is accurate and has not been tampered with. Example: file hash verification.<br><br>
+<b>Availability</b> — Ensures systems and data are accessible when needed. Example: backup servers and uptime monitoring.
+</div>
+<p>Cyber security is not just for large companies — individuals also need it to protect personal data, financial accounts, and privacy in daily digital life.</p>
+</div>
+
+<div class="div" onclick="toggle('c2')">Need of Cyber Security</div>
+<div id="c2" class="content">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>The need for cyber security arises due to increasing digital transactions and online activities. Without protection, users can lose personal data, financial information, and privacy. Cyber security helps maintain trust and safety in digital platforms.</p>
+<div class="warning-box">
+<strong>⚠ Did You Know?</strong><br>
+A cyber attack occurs every 39 seconds globally. Over 4 billion records are stolen each year due to poor cyber security practices.
+</div>
+<ul>
+<li><b>Rising Cybercrime:</b> Financial fraud, data theft, and identity crimes are increasing rapidly every year.</li>
+<li><b>Remote Work Risks:</b> Employees working from home use unsecured networks, making systems vulnerable.</li>
+<li><b>Cloud Storage:</b> Storing data on cloud without proper access control exposes it to breaches.</li>
+<li><b>IoT Devices:</b> Smart TVs, cameras, and home devices are often poorly secured.</li>
+<li><b>Social Engineering:</b> Hackers manipulate human psychology rather than just attacking systems.</li>
+</ul>
+</div>
+
+<div class="div" onclick="toggle('c3')">Types of Cyber Attacks</div>
+<div id="c3" class="content">
+<img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Common cyber attacks include malware, ransomware, phishing, and hacking. Each type of attack targets systems differently but aims to steal or damage data. Understanding these attacks helps users stay protected.</p>
+<table>
+<tr><th>Attack Type</th><th>Description</th><th>Prevention</th></tr>
+<tr><td>Phishing</td><td>Fake emails or websites used to steal login credentials</td><td>Verify sender, avoid clicking unknown links</td></tr>
+<tr><td>Malware</td><td>Malicious software that damages or controls systems</td><td>Install antivirus, avoid unknown downloads</td></tr>
+<tr><td>Ransomware</td><td>Encrypts your files and demands payment to restore them</td><td>Regular backups, don't open suspicious files</td></tr>
+<tr><td>DDoS Attack</td><td>Floods a server with traffic to crash it</td><td>Traffic filtering, load balancers</td></tr>
+<tr><td>SQL Injection</td><td>Inserts malicious code into website databases</td><td>Input validation, secure coding</td></tr>
+<tr><td>Man-in-the-Middle</td><td>Intercepts communication between two parties</td><td>Use HTTPS and VPN</td></tr>
+</table>
+</div>
+
+<div class="div" onclick="toggle('c4')">Cyber Awareness</div>
+<div id="c4" class="content">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber awareness means understanding online threats and practicing safe behavior while using digital devices. It plays a crucial role in preventing cyber crimes.</p>
+<div class="tip-list">
+<strong>✔ Good Cyber Habits to Follow Daily:</strong>
+<ul>
+<li>Think before you click on any link or attachment</li>
+<li>Do not share personal details on social media publicly</li>
+<li>Log out from accounts when using shared or public computers</li>
+<li>Always verify the website URL before entering passwords</li>
+<li>Regularly monitor your bank statements for suspicious activity</li>
+</ul>
+</div>
+<p>Cyber awareness training is now mandatory in many schools, colleges, and workplaces because human error is the number one cause of security breaches worldwide.</p>
+</div>
+
+<div class="div" onclick="toggle('c5')">Types of Cyber Threats</div>
+<div id="c5" class="content">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber threats come from various sources — hackers, criminal organizations, dishonest employees, and even foreign governments. Understanding the source of a threat helps in building the right defense strategy.</p>
+<div class="info-box">
+<b>Nation-State Attacks</b> — Carried out by governments to spy on or disrupt other countries. These are highly sophisticated and hard to detect.<br><br>
+<b>Insider Threats</b> — Employees or contractors who misuse their access to steal or leak data. Often the most damaging type.<br><br>
+<b>Cybercriminal Groups</b> — Organized crime gangs that run phishing, ransomware, and fraud operations for financial gain.<br><br>
+<b>Hacktivists</b> — Groups that hack systems to promote a political or social message, often defacing websites.<br><br>
+<b>Script Kiddies</b> — Inexperienced hackers who use ready-made tools without deep technical knowledge.
+</div>
+</div>
+
+<div class="div" onclick="toggle('c6')">Cyber Security Domains</div>
+<div id="c6" class="content">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber security is a broad field divided into specialized domains. Each domain focuses on protecting a specific part of digital infrastructure.</p>
+<ul>
+<li><b>Network Security:</b> Protects data as it travels across networks using firewalls, VPNs, and intrusion detection systems.</li>
+<li><b>Application Security:</b> Secures software and apps by finding vulnerabilities before attackers do.</li>
+<li><b>Cloud Security:</b> Protects data stored and processed on cloud platforms like AWS, Azure, and Google Cloud.</li>
+<li><b>Endpoint Security:</b> Secures individual devices like laptops, phones, and tablets from malware and unauthorized access.</li>
+<li><b>Identity & Access Management:</b> Controls who can access what using multi-factor authentication and role-based permissions.</li>
+<li><b>Incident Response:</b> Deals with detecting, managing, and recovering from security breaches when they occur.</li>
+</ul>
+</div>
+
+</div>
+
+<!-- PROTECTION PAGE -->
+<div id="protect" class="section">
+<h2>Protection Methods</h2>
+
+<div class="div" onclick="toggle('p1')">Password Security</div>
+<div id="p1" class="content">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Passwords are the first line of defense for any online account. A weak password can be cracked within seconds using modern tools, while a strong password can take years to break.</p>
+<table>
+<tr><th>Method</th><th>Description</th></tr>
+<tr><td>Strong Password</td><td>Use combination of letters, numbers, symbols</td></tr>
+<tr><td>Update Password</td><td>Change regularly every 60–90 days</td></tr>
+<tr><td>Unique Passwords</td><td>Never reuse the same password on multiple sites</td></tr>
+<tr><td>Password Manager</td><td>Use tools like LastPass or Bitwarden to store safely</td></tr>
+<tr><td>Avoid Personal Info</td><td>Never use your name, birthday, or phone number</td></tr>
+</table>
+<div class="warning-box">
+<strong>❌ Avoid Weak Passwords Like:</strong> password123, abc123, admin, your name, or your birthdate. These are the first ones hackers try.
+</div>
+</div>
+
+<div class="div" onclick="toggle('p2')">Antivirus & Firewall</div>
+<div id="p2" class="content">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Antivirus software scans your device for known malicious programs and removes them. A firewall acts as a security guard that monitors network traffic and blocks suspicious connections from entering or leaving your device.</p>
+<table>
+<tr><th>Tool</th><th>Use</th></tr>
+<tr><td>Antivirus</td><td>Detect and remove malware</td></tr>
+<tr><td>Firewall</td><td>Block unauthorized access</td></tr>
+</table>
+<div class="tip-list">
+<strong>✔ Best Practices:</strong>
+<ul>
+<li>Keep your antivirus updated to detect the latest threats</li>
+<li>Never disable your firewall even on home networks</li>
+<li>Run a full system scan at least once a week</li>
+<li>Use trusted software: Norton, Kaspersky, Bitdefender, Windows Defender</li>
+</ul>
+</div>
+</div>
+
+<div class="div" onclick="toggle('p3')">Two-Factor Authentication (2FA)</div>
+<div id="p3" class="content">
+<img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Two-Factor Authentication (2FA) adds a second step to your login process. Even if someone steals your password, they cannot access your account without the second verification step.</p>
+<div class="info-box">
+<b>How 2FA Works:</b><br><br>
+Step 1 — Enter your username and password as usual.<br>
+Step 2 — A one-time code is sent to your phone, email, or authentication app.<br>
+Step 3 — Enter the code to complete login. Without this code, no one can get in.
+</div>
+<ul>
+<li><b>SMS OTP:</b> A one-time code sent via text message to your registered mobile number.</li>
+<li><b>Authenticator App:</b> Apps like Google Authenticator generate a new code every 30 seconds.</li>
+<li><b>Email OTP:</b> A code sent to your registered email address for verification.</li>
+<li><b>Biometric:</b> Fingerprint or face recognition as the second factor on mobile devices.</li>
+<li><b>Hardware Token:</b> A physical device like a USB key that generates secure codes.</li>
+</ul>
+</div>
+
+<div class="div" onclick="toggle('p4')">VPN & Encryption</div>
+<div id="p4" class="content">
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>A VPN (Virtual Private Network) hides your real IP address and encrypts all internet traffic, making it unreadable to hackers and internet service providers. Encryption converts readable data into a coded format that only authorized parties can decode.</p>
+<div class="tip-list">
+<strong>✔ When to Use a VPN:</strong>
+<ul>
+<li>When connected to public Wi-Fi in cafes, airports, or hotels</li>
+<li>When accessing company systems from home</li>
+<li>When browsing from countries with internet restrictions</li>
+<li>When you want to keep your browsing activity private</li>
+</ul>
+</div>
+<div class="info-box">
+<b>Popular VPN Tools:</b> NordVPN, ExpressVPN, ProtonVPN, Windscribe<br><br>
+<b>Types of Encryption:</b> SSL/TLS for websites (HTTPS), End-to-End Encryption for messaging apps (WhatsApp, Signal), Disk Encryption for stored files (BitLocker, VeraCrypt).
+</div>
+</div>
+
+<div class="div" onclick="toggle('p5')">Safe Browsing Practices</div>
+<div id="p5" class="content">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Safe browsing means being careful about the websites you visit and the information you share online. Many cyber attacks begin simply because a user visited a malicious website or clicked on a dangerous link.</p>
+<ul>
+<li><b>Check for HTTPS:</b> Always look for the padlock icon in the browser address bar before entering any personal or payment information.</li>
+<li><b>Avoid Pop-ups:</b> Never click on pop-up ads — they often contain malware or lead to fake websites. Use a browser ad-blocker.</li>
+<li><b>Verify URLs:</b> Fake websites often have small spelling changes like "paypa1.com" instead of "paypal.com". Always double-check.</li>
+<li><b>Clear Cache & Cookies:</b> Regularly clearing browser data reduces tracking and the risk of session hijacking.</li>
+<li><b>Update Your Browser:</b> Browser updates patch known security vulnerabilities. Always keep your browser up to date.</li>
+</ul>
+<div class="warning-box">
+<strong>⚠ Warning:</strong> If a website asks you to disable your antivirus or browser security to continue, close it immediately — it is almost certainly malicious.
+</div>
+</div>
+
+<div class="div" onclick="toggle('p6')">Data Backup Strategy</div>
+<div id="p6" class="content">
+<img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Regular data backups are your safety net against ransomware, hardware failure, accidental deletion, and natural disasters. If your data is backed up, even a ransomware attack becomes far less damaging.</p>
+<div class="info-box">
+<strong>The 3-2-1 Backup Rule:</strong><br><br>
+Keep <b>3</b> copies of your data — the original plus two backups.<br>
+Store them on <b>2</b> different types of media — for example, an external hard drive and a cloud service.<br>
+Keep <b>1</b> copy offsite or in the cloud so a physical disaster cannot destroy all copies.
+</div>
+<ul>
+<li><b>Full Backup:</b> A complete copy of all data. Done weekly. Best for full system recovery.</li>
+<li><b>Incremental Backup:</b> Only backs up files that changed since the last backup. Fast and space-efficient.</li>
+<li><b>Cloud Backup:</b> Automatic backups to services like Google Drive, OneDrive, or iCloud. Always accessible.</li>
+<li><b>External Drive:</b> Backing up to a physical USB or hard drive stored separately from your main device.</li>
+</ul>
+</div>
+
+</div>
+
+<!-- HELPLINE PAGE -->
+<div id="help" class="section">
+<h2>Cyber Crime Helpline</h2>
+
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" class="section-img" style="max-height:250px;">
+
+<p>If you are a victim of cyber crime, do not panic. Report it immediately using the official helpline. Early reporting increases the chance of recovery and legal action against the attacker.</p>
+
+<div class="helpline-number">📞 National Cyber Crime Helpline: 1930</div>
+
+<p style="text-align:center;font-size:1.1em;">Online Portal: <b>cybercrime.gov.in</b> — Available 24 hours, 7 days a week</p>
+
+<div class="div" onclick="toggle('h1')">Helpline Services</div>
+<div id="h1" class="content">
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber helplines provide assistance to victims of cyber crimes by helping them report incidents and take action. They guide users in recovering accounts and preventing further damage.</p>
+<div class="info-box">
+<b>What the Helpline Can Help You With:</b>
+<ul>
+<li>Online financial fraud and UPI scams</li>
+<li>Account hacking and unauthorized access</li>
+<li>Cyberbullying and online harassment</li>
+<li>Identity theft and misuse of personal data</li>
+<li>Phishing and fake website complaints</li>
+</ul>
+</div>
+<p>When you call 1930 or visit cybercrime.gov.in, have your screenshots, transaction IDs, and account details ready. The faster you report, the higher the chance of freezing fraudulent transactions.</p>
+</div>
+
+<div class="div" onclick="toggle('h2')">Steps to Take After a Cyber Attack</div>
+<div id="h2" class="content">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>If you suspect you have been attacked, act quickly. Every minute counts — especially in cases of financial fraud where transactions can still be reversed if reported fast enough.</p>
+<ol>
+<li><b>Disconnect from the internet immediately</b> to stop any ongoing data theft or unauthorized access.</li>
+<li><b>Change all passwords</b> on compromised accounts from a different, safe device.</li>
+<li><b>Enable Two-Factor Authentication</b> on all your important accounts right away.</li>
+<li><b>Call your bank immediately</b> if any financial fraud has occurred. Request a freeze on suspicious transactions.</li>
+<li><b>Take screenshots</b> of all suspicious messages, emails, or transactions as evidence before deleting anything.</li>
+<li><b>File a complaint</b> at cybercrime.gov.in or call 1930 with all collected evidence.</li>
+<li><b>Run a full antivirus scan</b> on your device to detect and remove any installed malware.</li>
+</ol>
+<div class="warning-box">
+<strong>⚠ Important:</strong> Do not format your device or delete any messages before filing the complaint. Evidence is critical for police investigation.
+</div>
+</div>
+
+<div class="div" onclick="toggle('h3')">Types of Cyber Crimes You Can Report</div>
+<div id="h3" class="content">
+<img src="https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Cyber crime covers a wide range of offenses. Here are the main categories that can be reported through official channels in India:</p>
+<ul>
+<li><b>Online Financial Fraud:</b> Unauthorized bank transfers, UPI fraud, credit/debit card misuse, lottery scams.</li>
+<li><b>Cyberbullying & Harassment:</b> Threatening messages, defamation, stalking, and online abuse on social media.</li>
+<li><b>Identity Theft:</b> Someone using your name, photos, or personal documents to create fake profiles or commit fraud.</li>
+<li><b>Hacking:</b> Unauthorized access to your email, social media, or computer systems.</li>
+<li><b>Phishing & Fake Websites:</b> Being tricked into entering credentials on a fake banking or shopping site.</li>
+<li><b>Child Safety Crimes:</b> Any inappropriate content involving minors should be reported immediately to the cyber cell.</li>
+</ul>
+<div class="info-box">
+<b>Emergency Contacts:</b><br>
+Cyber Crime Helpline: <b>1930</b><br>
+Women Safety Helpline: <b>1091</b><br>
+Police: <b>100</b><br>
+CERT-In (Technical Emergencies): <b>1800-11-4949</b>
+</div>
+</div>
+
+<div class="div" onclick="toggle('h4')">Global Cyber Security Organizations</div>
+<div id="h4" class="content">
+<img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=900&q=80" class="section-img">
+<p>Several national and international organizations work to combat cyber crime and protect digital infrastructure around the world.</p>
+<ul>
+<li><b>CERT-In (India):</b> The Indian Computer Emergency Response Team handles national cyber security incidents and issues advisories. Website: cert-in.org.in</li>
+<li><b>CISA (USA):</b> The Cybersecurity and Infrastructure Security Agency protects critical US infrastructure from cyber threats.</li>
+<li><b>Interpol Cyber Unit:</b> Coordinates global cybercrime investigations across member countries.</li>
+<li><b>ENISA (Europe):</b> The EU Agency for Cybersecurity provides guidance and support to European member states.</li>
+<li><b>NCSC (UK):</b> The National Cyber Security Centre helps UK businesses and citizens defend against cyber threats.</li>
+</ul>
+</div>
+
+</div>
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="section">
+<h2>Contact & Registration</h2>
+
+<img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" class="section-img" style="max-height:200px;">
+
+<h3>Our Team</h3>
+
+<div class="team-card">
+<h4>Rahul Sharma — Team Lead</h4>
+<p>Responsible for overall project coordination, research, and content planning. Ensures the project meets its goals and deadlines.</p>
+</div>
+
+<div class="team-card">
+<h4>Sneha Patil — Designer</h4>
+<p>Handles UI/UX design, visual layout, and all graphic elements of the project. Creates an engaging and user-friendly experience.</p>
+</div>
+
+<div class="team-card">
+<h4>Amit Verma — Developer</h4>
+<p>Responsible for all web development, coding, and technical implementation of the project features and functionality.</p>
+</div>
+
+<h3>Send Us a Message</h3>
+
+<form onsubmit="return false;">
+<input placeholder="Full Name">
+<input placeholder="Email Address">
+<input placeholder="Phone Number">
+<input placeholder="Subject">
+<textarea placeholder="Your Message" rows="5"></textarea>
+<input type="submit" value="Register" style="background:#1E88E5;color:white;border:none;cursor:pointer;font-size:16px;padding:10px;width:100%;">
+</form>
+
+<h3 style="margin-top:20px;">Get In Touch</h3>
+<div class="team-card">
+<p>📧 <b>Email:</b> info@cybersecurityproject.com</p>
+<p>📞 <b>Phone:</b> +91 98765 43210</p>
+<p>📍 <b>Location:</b> Maharashtra, India</p>
+<p>🕐 <b>Working Hours:</b> Monday to Saturday, 9:00 AM – 6:00 PM</p>
+</div>
+
+</div>
+
+<footer>
+<marquee>© 2026 Cyber Security Project | Stay Safe Online | Report Cyber Crime: 1930</marquee>
+</footer>
+
+</body>
+</html>
